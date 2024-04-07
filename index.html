@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>Navbar Template · Bootstrap v5.3</title>
+    <title>Character Sheet Beta</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbars-offcanvas/">
 
@@ -48,10 +48,10 @@
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
         <!-- <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
             aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"> -->
-            <!-- <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+        <!-- <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
                 <use href="#circle-half"></use>
             </svg> -->
-            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
         </button>
         <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
             <!-- <li>
@@ -152,31 +152,74 @@
         </nav>
 
 
-        <!-- text block -->
+        <!-- Carousel -->
         <div id="carouselExampleFade" class="carousel slide carousel-fade">
             <div class="carousel-inner">
-                <div class="carousel-item active" style="text-align:center; background-color: rgb(90, 87, 83); padding: 180px 0 200px;">
-                    <h1 style="margin-top: -100px;">Combat</h1>
-                    <h3></h3>
+                <div class="carousel-item active"
+                    style="text-align:center; background-color: rgb(90, 87, 83); padding: 280px 0 200px;">
+                    <h1 style="margin-top: -200px;">Combat</h1>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <!-- First card -->
+                        <div class="card" style="width: 18rem; margin-right: 200px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 1</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">Subtitle</h6>
+                                <p class="card-text">Content for card 1.</p>
+                                <a href="#" class="card-link">Link</a>
+                            </div>
+                        </div>
+                        <!-- Middle card (centered) -->
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 2 (Center)</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">Subtitle</h6>
+                                <p class="card-text">Content for card 2 (Center).</p>
+                                <a href="#" class="card-link">Link</a>
+                            </div>
+                        </div>
+                        <!-- Third card -->
+                        <div class="card" style="width: 18rem; margin-left: 200px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 3</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">Subtitle</h6>
+                                <p class="card-text">Content for card 3.</p>
+                                <a href="#" class="card-link">Link</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-item active" style="text-align:center; background-color: rgb(90, 87, 83); padding: 180px 0 200px;">
+                <div class="carousel-item" style="text-align:center; background-color: rgb(90, 87, 83); padding: 180px 0;">
                     <h1 style="margin-top: -100px;">Skills</h1>
-                    <h3></h3>
+                    <h3>Content for Skills page</h3>
+                </div>
+        
+                <!-- Next and previous buttons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+        </div>
+
+        <!-- new text areas  -->
+
+        <div class="card">
+            <div class="card-body">
+                This is some text within a card body.
+            </div>
         </div>
     </main>
     <script src="bootstrap-5.3.3-examples/assets/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        tooltipTriggerList.forEach(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    </script>
 </body>
 
 </html>
