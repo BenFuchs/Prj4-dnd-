@@ -117,32 +117,55 @@
                             <!-- Box 1 -->
                             <div class="box-container">
                                 <label class="box-label">Strength</label>
-                                <input type="text" class="box" maxlength="2">
+                                <input type="text" class="box" maxlength="2" id="str">
+                                <div>
+                                    <button class="button" onclick="addStat('str')">+</button>
+                                    <button class="button" onclick="minusStat('str')">-</button>
+                                </div>
                             </div>
                             <!-- Box 2 -->
                             <div class="box-container">
                                 <label class="box-label">Dexterity</label>
-                                <input type="text" class="box" maxlength="2">
+                                <input type="text" class="box" maxlength="2" id="dex">
+                                <div>
+                                    <button class="button" onclick="addStat('dex')">+</button>
+                                    <button class="button" onclick="minusStat('dex')">-</button>
+                                </div>
                             </div>
                             <!-- Box 3 -->
                             <div class="box-container">
                                 <label class="box-label">Constitution</label>
-                                <input type="text" class="box" maxlength="2">
+                                <input type="text" class="box" maxlength="2" id="con">
+                                <div>
+                                    <button class="button" onclick="addStat('con')">+</button>
+                                    <button class="button" onclick="minusStat('con')">-</button>
+                                </div>
                             </div>
                             <!-- Box 4 -->
                             <div class="box-container">
                                 <label class="box-label">Intelligence</label>
-                                <input type="text" class="box" maxlength="2">
-                            </div>
+                                <input type="text" class="box" maxlength="2" id="int">
+                                <div>
+                                    <button class="button" onclick="addStat('int')">+</button>
+                                    <button class="button" onclick="minusStat('int')">-</button>
+                                </div>
                             <!-- Box 5 -->
                             <div class="box-container">
                                 <label class="box-label">Wisdom</label>
-                                <input type="text" class="box" maxlength="2">
+                                <input type="text" class="box" maxlength="2" id="wis">
+                                <div>
+                                    <button class="button" onclick="addStat('wis')">+</button>
+                                    <button class="button" onclick="minusStat('wis')">-</button>
+                                </div>
                             </div>
                             <!-- Box 6 -->
                             <div class="box-container">
                                 <label class="box-label">Charisma</label>
-                                <input type="text" class="box" maxlength="2">
+                                <input type="text" class="box" maxlength="2" id="char">
+                                <div>
+                                    <button class="button" onclick="addStat('char')">+</button>
+                                    <button class="button" onclick="minusStat('char')">-</button>
+                                </div>
                             </div>
                         </div>
 
@@ -188,11 +211,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" style="text-align:center; background-color: rgb(90, 87, 83); padding: 180px 0;">
+                <div class="carousel-item"
+                    style="text-align:center; background-color: rgb(90, 87, 83); padding: 180px 0;">
                     <h1 style="margin-top: -100px;">Skills</h1>
                     <h3>Content for Skills page</h3>
                 </div>
-        
+
                 <!-- Next and previous buttons -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
                     data-bs-slide="prev">
@@ -217,8 +241,44 @@
     </main>
     <script src="bootstrap-5.3.3-examples/assets/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        //tooltip activation, currently not relevant 
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
         tooltipTriggerList.forEach(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+        function addStat(inputId) {
+            var input = document.getElementById(inputId);
+            var currentValue = input.value.trim(); // Get the trimmed value of the input
+            if (currentValue === "") { // Check if the input is empty
+                input.value = "1"; // If empty, set the value to "1"
+            } else {
+                var intValue = parseInt(currentValue); // Parse the input value as an integer
+                if (!isNaN(intValue)) { // Check if parsing was successful (not NaN)
+                    input.value = intValue + 1; // Increment the parsed value by 1
+                } else {
+                    // Handle case where input is not a valid integer
+                    console.error("Invalid input. Please enter a valid number.");
+                }
+            }
+        }
+
+        function minusStat(inputId) {
+            var input = document.getElementById(inputId);
+            var currentValue = input.value.trim(); // Get the trimmed value of the input
+
+            // If the input value is not empty and can be parsed as an integer
+            if (currentValue !== "" && !isNaN(currentValue)) {
+                // Parse the input value as an integer
+                var intValue = parseInt(currentValue);
+                if (intValue > 1) {
+                // Subtract 1 from the parsed value and update the input field
+                input.value = intValue - 1;
+                }
+            } else {
+                // If the input value is empty or not a valid number, handle it accordingly
+                console.error("Invalid input. Please enter a valid number.");
+            }
+        }
+
     </script>
 </body>
 
