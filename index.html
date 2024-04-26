@@ -149,29 +149,29 @@
                                     <button class="button" onclick="addStat('int')">+</button>
                                     <button class="button" onclick="minusStat('int')">-</button>
                                 </div>
-                            <!-- Box 5 -->
-                            <div class="box-container">
-                                <label class="box-label">Wisdom</label>
-                                <input type="text" class="box" maxlength="2" id="wis">
-                                <div>
-                                    <button class="button" onclick="addStat('wis')">+</button>
-                                    <button class="button" onclick="minusStat('wis')">-</button>
+                                <!-- Box 5 -->
+                                <div class="box-container">
+                                    <label class="box-label">Wisdom</label>
+                                    <input type="text" class="box" maxlength="2" id="wis">
+                                    <div>
+                                        <button class="button" onclick="addStat('wis')">+</button>
+                                        <button class="button" onclick="minusStat('wis')">-</button>
+                                    </div>
+                                </div>
+                                <!-- Box 6 -->
+                                <div class="box-container">
+                                    <label class="box-label">Charisma</label>
+                                    <input type="text" class="box" maxlength="2" id="char">
+                                    <div>
+                                        <button class="button" onclick="addStat('char')">+</button>
+                                        <button class="button" onclick="minusStat('char')">-</button>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- Box 6 -->
-                            <div class="box-container">
-                                <label class="box-label">Charisma</label>
-                                <input type="text" class="box" maxlength="2" id="char">
-                                <div>
-                                    <button class="button" onclick="addStat('char')">+</button>
-                                    <button class="button" onclick="minusStat('char')">-</button>
-                                </div>
-                            </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
-            </div>
         </nav>
 
 
@@ -185,36 +185,152 @@
                         <!-- First card -->
                         <div class="card" style="width: 18rem; margin-right: 200px;">
                             <div class="card-body">
-                                <h5 class="card-title">Card 1</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Subtitle</h6>
-                                <p class="card-text">Content for card 1.</p>
-                                <a href="#" class="card-link">Link</a>
+                                <h5 class="card-title">Health</h5>
+                                <h6><label>Max health:</label>
+                                    <input class="proficiency-input">
+                                </h6>
+                                <h6><label>Current health:</label>
+                                    <input class="proficiency-input">
+                                </h6>
                             </div>
                         </div>
                         <!-- Middle card (centered) -->
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
-                                <h5 class="card-title">Card 2 (Center)</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Subtitle</h6>
-                                <p class="card-text">Content for card 2 (Center).</p>
-                                <a href="#" class="card-link">Link</a>
+                                <h5 class="card-title">Armor/speed/initiative</h5>
+                                <div class="ac-input-container">
+                                    <label>AC</label>
+                                    <input class="ASI-input">
+                                </div>
+                                <div class="ac-input-container">
+                                    <label>Speed</label>
+                                    <input class="ASI-input">
+                                </div>
+                                <div class="ac-input-container">
+                                    <label>Initiative</label>
+                                    <input class="ASI-input">
+                                </div>
                             </div>
                         </div>
                         <!-- Third card -->
                         <div class="card" style="width: 18rem; margin-left: 200px;">
                             <div class="card-body">
-                                <h5 class="card-title">Card 3</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Subtitle</h6>
-                                <p class="card-text">Content for card 3.</p>
-                                <a href="#" class="card-link">Link</a>
+                                <h5 class="card-title">saving throws </h5>
+                                <div class="ac-input-container">
+                                    <input type="checkbox">
+                                    <label>Speed</label>
+                                    <input type="number" class="ASI-input">
+                                </div>
+                                <div class="ac-input-container">
+                                    <input type="checkbox">
+                                    <label>Dexterity</label>
+                                    <input class="ASI-input">
+                                </div>
+                                <div class="ac-input-container">
+                                    <input type="checkbox">
+                                    <label>Constitution</label>
+                                    <input class="ASI-input">
+                                </div>
+                                <div class="ac-input-container">
+                                    <input type="checkbox">
+                                    <label>Intelligence</label>
+                                    <input class="ASI-input">
+                                </div>
+                                <div class="ac-input-container">
+                                    <input type="checkbox">
+                                    <label>Wisdom</label>
+                                    <input class="ASI-input">
+                                </div>
+                                <div class="ac-input-container">
+                                    <input type="checkbox">
+                                    <label>Charisma</label>
+                                    <input class="ASI-input">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Skills page -->
                 <div class="carousel-item"
                     style="text-align:center; background-color: rgb(90, 87, 83); padding: 180px 0;">
-                    <h1 style="margin-top: -100px;">Skills</h1>
-                    <h3>Content for Skills page</h3>
+                    <h1 style="margin-top: -100px;">Proficiencies</h1>
+
+                    <div class="grid-container">
+                        <div class="grid-item grid-flex">
+                            <input type="checkbox"><label>Acrobatics</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item grid-flex">
+                            <input type="checkbox"><label>Animal Handling</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item grid-flex">
+                            <input type="checkbox"><label>Arcana</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item grid-flex">
+                            <input type="checkbox"><label>Athletics</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item grid-flex">
+                            <input type="checkbox"><label>Deception</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item">
+                            <input type="checkbox"><label>History</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item">
+                            <input type="checkbox"><label>Insight</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item">
+                            <input type="checkbox"><label>Intimidation</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item">
+                            <input type="checkbox"><label>Investigation</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item">
+                            <input type="checkbox"><label>Medicine</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item">
+                            <input type="checkbox"><label>Nature</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item">
+                            <input type="checkbox"><label>Perception</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item">
+                            <input type="checkbox"><label>Performance</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item">
+                            <input type="checkbox"><label>Persuasion</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item">
+                            <input type="checkbox"><label>Religion</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item">
+                            <input type="checkbox"><label>Sleight of Hand</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item">
+                            <input type="checkbox"><label>Stealth</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                        <div class="grid-item">
+                            <input type="checkbox"><label>Survival</label>
+                            <input type="text" class="align-input proficiency-input" maxlength="2">
+                        </div>
+                    </div>
+
+
                 </div>
 
                 <!-- Next and previous buttons -->
@@ -239,23 +355,20 @@
             </div>
         </div>
     </main>
+
     <script src="bootstrap-5.3.3-examples/assets/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        //tooltip activation, currently not relevant 
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-        tooltipTriggerList.forEach(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
         function addStat(inputId) {
             var input = document.getElementById(inputId);
-            var currentValue = input.value.trim(); // Get the trimmed value of the input
-            if (currentValue === "") { // Check if the input is empty
-                input.value = "1"; // If empty, set the value to "1"
+            var currentValue = input.value.trim();
+            if (currentValue === "") {
+                input.value = "0";
             } else {
-                var intValue = parseInt(currentValue); // Parse the input value as an integer
-                if (!isNaN(intValue)) { // Check if parsing was successful (not NaN)
-                    input.value = intValue + 1; // Increment the parsed value by 1
+                var intValue = parseInt(currentValue);
+                if (!isNaN(intValue)) {
+                    input.value = intValue + 1;
                 } else {
-                    // Handle case where input is not a valid integer
                     console.error("Invalid input. Please enter a valid number.");
                 }
             }
@@ -263,15 +376,15 @@
 
         function minusStat(inputId) {
             var input = document.getElementById(inputId);
-            var currentValue = input.value.trim(); // Get the trimmed value of the input
+            var currentValue = input.value.trim();
 
-            // If the input value is not empty and can be parsed as an integer
+
             if (currentValue !== "" && !isNaN(currentValue)) {
                 // Parse the input value as an integer
                 var intValue = parseInt(currentValue);
                 if (intValue > 1) {
-                // Subtract 1 from the parsed value and update the input field
-                input.value = intValue - 1;
+                    // Subtract 1 from the parsed value and update the input field
+                    input.value = intValue - 1;
                 }
             } else {
                 // If the input value is empty or not a valid number, handle it accordingly

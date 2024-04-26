@@ -103,7 +103,6 @@
     /* Space label 5px above the box */
 }
 
-
 .box-container {
     display: flex;
     flex-direction: column;
@@ -114,7 +113,6 @@
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    
 }
 
 .offcanvas-title {
@@ -136,5 +134,54 @@
     width: 30px;
     height: 30px;
     text-align: center;
-    
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 10px;
+    justify-content: center; 
+    margin: 0 auto; 
+    max-width: 1200px; 
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.grid-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.align-input {
+   
+    margin-left: 10px;
+}
+
+.proficiency-input {
+    width: 50px; 
+    height: 25px; 
+    margin-top: 5px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+}
+
+.ASI-input {
+    width: 50px;
+    height: 25px;
+    margin-left: 10px; 
+    align-items: center;
+}
+
+.ac-input-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.ac-input-container label {
+    margin-right: 5px; 
 }
