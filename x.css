@@ -76,8 +76,10 @@
 }
 
 .waga {
-    text-align: center; /* Center the content horizontally */
-    margin-top: 20px; /* Adjust margin-top as needed */
+    text-align: center;
+    /* Center the content horizontally */
+    margin-top: 20px;
+    /* Adjust margin-top as needed */
 }
 
 .fontheader {
@@ -111,12 +113,16 @@
 
 .offcanvas-header {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
 }
 
 .offcanvas-title {
-    padding-left: 160px;; /* Remove default margin */
+    padding-left: 160px;
+    ;
+    /* Remove default margin */
     text-decoration: underline solid;
 }
 
@@ -138,14 +144,15 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-    justify-content: center; 
-    margin: 0 auto; 
-    max-width: 1200px; 
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
     padding-left: 100px;
     padding-right: 100px;
 }
+
 .grid-item {
     display: flex;
     align-items: center;
@@ -154,16 +161,16 @@
 }
 
 .align-input {
-   
+
     margin-left: 10px;
 }
 
 .proficiency-input {
-    width: 50px; 
-    height: 25px; 
-    margin-top: 5px; 
-    display: block; 
-    margin-left: auto; 
+    width: 50px;
+    height: 25px;
+    margin-top: 5px;
+    display: block;
+    margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
@@ -171,17 +178,55 @@
 .ASI-input {
     width: 50px;
     height: 25px;
-    margin-left: 10px; 
+    margin-left: 10px;
     align-items: center;
 }
 
 .ac-input-container {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 5px;
 }
 
 .ac-input-container label {
-    margin-right: 5px; 
+    margin-right: 5px;
+}
+
+.inputBox {
+    width: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Align items vertically */
+    justify-content: space-around;
+    /* Distribute items evenly */
+    margin-bottom: 50px;
+    /* Add some space between rows */
+    border: solid;
+    height: 55px;
+}
+
+/* Style for buttons */
+.container button {
+    height: 50px;
+    width: 50px;
+}
+
+.dice {
+    width: 40px;
+    /* Set a fixed width for each dice container */
+    height: 40px;
+    /* Set a fixed height for each dice container */
+    border: 1px solid black;
+    /* Add border for visual clarity */
+    text-align: center;
+    /* Center the content horizontally */
+    display: inline-block;
+    /* Display divs inline */
+    margin-right: 10px;
+    /* Add some space between dice containers */
 }
