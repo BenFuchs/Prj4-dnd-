@@ -22,6 +22,7 @@
 
     <link href="navbars-offcanvas.css" rel="stylesheet">
     <script src="diceRoll.js"></script>
+    <script src="bootstrap-5.3.3-examples/assets/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -374,44 +375,6 @@
 
         </div>
     </main>
-
-    <script src="bootstrap-5.3.3-examples/assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-
-        function addStat(inputId) {
-            var input = document.getElementById(inputId);
-            var currentValue = input.value.trim();
-            if (currentValue === "") {
-                input.value = "0";
-            } else {
-                var intValue = parseInt(currentValue);
-                if (!isNaN(intValue)) {
-                    input.value = intValue + 1;
-                } else {
-                    console.error("Invalid input. Please enter a valid number.");
-                }
-            }
-        }
-
-        function minusStat(inputId) {
-            var input = document.getElementById(inputId);
-            var currentValue = input.value.trim();
-
-
-            if (currentValue !== "" && !isNaN(currentValue)) {
-                // Parse the input value as an integer
-                var intValue = parseInt(currentValue);
-                if (intValue > 1) {
-                    // Subtract 1 from the parsed value and update the input field
-                    input.value = intValue - 1;
-                }
-            } else {
-                // If the input value is empty or not a valid number, handle it accordingly
-                console.error("Invalid input. Please enter a valid number.");
-            }
-        }
-
-    </script>
 </body>
 
 </html>
