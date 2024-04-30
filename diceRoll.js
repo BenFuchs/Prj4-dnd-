@@ -67,3 +67,22 @@ function minusStat(inputId) {
         console.error("Invalid input. Please enter a valid number.");
     }
 }
+
+// stat modifiers
+function calcMod(attributeId) {
+    var attributeValue = parseInt(document.getElementById(attributeId).value);
+    var modifier = calculateModifier(attributeValue);
+    console.log(modifier);
+}
+
+function calculateModifier(attributeValue) {
+
+    return Math.floor((attributeValue - 10) / 2);
+}
+
+setInterval(function () {calcMod('str');}, 600000);
+setInterval(function () {calcMod('dex');}, 600000);
+setInterval(function () {calcMod('con');}, 600000);
+setInterval(function () {calcMod('wis');}, 600000);
+setInterval(function () {calcMod('int');}, 600000);
+setInterval(function () {calcMod('char');}, 600000);
