@@ -69,20 +69,25 @@ function minusStat(inputId) {
 }
 
 // stat modifiers
-function calcMod(attributeId) {
-    var attributeValue = parseInt(document.getElementById(attributeId).value);
-    var modifier = calculateModifier(attributeValue);
-    console.log(modifier);
-}
-
 function calculateModifier(attributeValue) {
-
     return Math.floor((attributeValue - 10) / 2);
 }
 
-setInterval(function () {calcMod('str');}, 600000);
-setInterval(function () {calcMod('dex');}, 600000);
-setInterval(function () {calcMod('con');}, 600000);
-setInterval(function () {calcMod('wis');}, 600000);
-setInterval(function () {calcMod('int');}, 600000);
-setInterval(function () {calcMod('char');}, 600000);
+function calcMod(attributeId, localStorageKey) {
+    var attributeValue = parseInt(document.getElementById(attributeId).value);
+    var modifier = calculateModifier(attributeValue);
+    console.log(modifier);
+    localStorage.setItem(localStorageKey, modifier);
+}
+
+
+setInterval(function () {calcMod('str', 'strMOD');}, 1000);
+setInterval(function () {calcMod('dex', 'dexMOD');}, 1000);
+setInterval(function () {calcMod('con', 'conMOD');}, 1000);
+setInterval(function () {calcMod('wis', 'wisMOD');}, 1000);
+setInterval(function () {calcMod('int', 'intMOD');}, 1000);
+setInterval(function () {calcMod('char', 'charMOD');}, 1000);
+
+
+// store info into locstorage
+// localStorage.setItem(Strength_Mod, modifier)
