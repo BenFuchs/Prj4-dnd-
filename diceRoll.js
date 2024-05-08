@@ -1,3 +1,6 @@
+<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+const serverStats ='http://localhost:3000/Base stats'
+const serverMods ='http://localhost:3000/Mod stats'
 // dice roll functions 
 function rollD20() {
     var d20 = ''
@@ -87,6 +90,10 @@ setInterval(function () {calcMod('con', 'conMOD');}, 1000);
 setInterval(function () {calcMod('wis', 'wisMOD');}, 1000);
 setInterval(function () {calcMod('int', 'intMOD');}, 1000);
 setInterval(function () {calcMod('char', 'charMOD');}, 1000);
+
+const updateStat =() => {
+    axios.put()
+}
 
 
 // store info into locstorage

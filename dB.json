@@ -1,0 +1,8 @@
+{
+    "Base stats": [
+          { "id": "1", "Stat": "test", "Value": 100 }
+        ],
+    "Mod stats": [
+      { "id": "1", "Mod": "a comment about post 1", "Value": "1" }
+    ]
+}
